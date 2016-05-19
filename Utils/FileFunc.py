@@ -46,7 +46,7 @@ class FileFunc:
                     raise
 
     @staticmethod
-    def load_files_folder_into_list(foldername):
+    def load_json_folder_into_list(foldername):
         ret = []
         files = glob.glob(foldername + '/*.json')
         for f in files:
