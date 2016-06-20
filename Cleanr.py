@@ -81,8 +81,15 @@ def clean_line(line):
 
 
 def extract_timestamp(line):
-    pass
+    ret = clean_line(line)
+    return tf.time_func_log_date_to_python_date(ret[0])
 
+def extract_action(line):
+    ret = clean_line(line)
+    return ret[1]
+
+def per_user_histogram():
+    pass
 
 if __name__ == '__main__':
 
@@ -104,3 +111,5 @@ if __name__ == '__main__':
     print(extract_students_interaction(data))
     print(extract_timestamp('May 6, 2016, 4:07 pm CLASSIFIER ENABLE'))
     print(tf.time_func_log_date_to_python_date('May 6, 2016, 4:07 pm'))
+
+    print(extract_action('May 6, 2016, 4:07 pm CLASSIFIER ENABLE'))

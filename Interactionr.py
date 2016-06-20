@@ -11,3 +11,8 @@ classifier_actions = ['CLASSIFIER', 'CLASSIFIER_CREATE', 'CLASSIFIER_EDIT',
                       'CLASSIFIER_RESET', 'CLASSIFIER_IVERB', 'CLASSIFIER_FILTER',
                     'CLASSIFIER_UNION', 'CLASSIFIER_INTERSECT']
 
+def extract_entry_tokens():
+    pass
+
+def extract_interactions():
+    pass
