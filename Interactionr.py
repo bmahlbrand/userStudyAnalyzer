@@ -1,13 +1,29 @@
-interaction_keys = ['HEATMAP', 'TOOLTIP', 'TAGMAP',
-                    'AGING', 'CONTENTLENS', 'LDA',
-                    'MSGTABLE', 'SPATIAL', 'KEYWORD_DATE',
+interaction_keys = ['LDA',
+                    'KEYWORD_DATE',
+                    'SPATIAL',
+                    'TOOLTIP',
+                    'CONTENTLENS',
+                    'TAGMAP',
+                    'HEATMAP',
+                    'AGING',
+                    'CLASSIFIER',
+                    'MSGTABLE',
+                    'USER',
+                    'NEWSTABLE',
                     'RESET']
-
-actions = ['ENABLE', 'DISABLE', 'DEFAULT']
 
 table_actions = ['TABLE_REFRESH', 'TABLE_DOWN', 'TABLE_UP', 'TABLE_DOWNLOAD'] #is this MSGTABLE?
 
-classifier_actions = ['CLASSIFIER', 'CLASSIFIER_CREATE', 'CLASSIFIER_EDIT',
-                      'CLASSIFIER_RESET', 'CLASSIFIER_IVERB', 'CLASSIFIER_FILTER',
-                    'CLASSIFIER_UNION', 'CLASSIFIER_INTERSECT']
+classifier_actions = ['CLASSIFIER_CREATE',
+                      'CLASSIFIER_EDIT',
+                      'CLASSIFIER_FILTER',
+                      'CLASSIFIER_RESET',
+                      'CLASSIFIER_IVERB',
+                      'CLASSIFIER_INTERSECT',
+                      'CLASSIFIER_UNION']
 
+operations = [
+    'DEFAULT',
+    'ENABLE',
+    'DISABLE'
+]
