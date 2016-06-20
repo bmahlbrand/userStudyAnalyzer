@@ -10,4 +10,4 @@ def time_func_solr_date_to_python_date(str):
 
 
 def time_func_log_date_to_python_date(str):
-    return datetime.strptime(str, "%b %d, %Y, %I:%M %p")
+    return datetime.strptime(str, "%B %d, %Y, %I:%M %p")
