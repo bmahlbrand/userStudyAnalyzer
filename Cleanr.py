@@ -95,6 +95,22 @@ def extract_operation(line):
     return ret[1].split(' ')[1]
 
 
+def extract_durations(user_actions):
+
+    stk = []
+
+    for entry in user_actions:
+        print(entry)
+        stk.append(entry)
+
+    while len(stk):
+        en = stk.pop()
+        for e in stk:
+            if e['action'] == en['action']:
+                print("found")
+                stk.remove(e)
+
+
 def build_table_from_files(filenames):
     thestructure = {}
 
@@ -131,10 +147,11 @@ if __name__ == '__main__':
     print(extract_timestamp('May 06, 2016, 4:07 pm CLASSIFIER ENABLE'))
     print(extract_timestamp('February 21, 2016, 5:07 pm CLASSIFIER ENABLE'))
 
-
-
-    print('table: ', build_table_from_files(data))
-
+    table = build_table_from_files(data)
+    print('table: ', table)
+    print(table.keys())
+    key = list(table.keys())[0]
+    print(extract_durations(table[key]))
 
     print(tf.time_func_log_date_to_python_date('May 6, 2016, 4:07 pm'))
 
